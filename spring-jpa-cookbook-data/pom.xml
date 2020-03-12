@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.cookbook</groupId>
         <artifactId>spring-jpa-cookbook</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <artifactId>spring-jpa-cookbook-data</artifactId>
     <packaging>jar</packaging>
@@ -16,9 +16,8 @@
 
 <dependencies>
     <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.11.10.RELEASE</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -28,6 +27,13 @@
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
         <version>1.4.192</version>
+    </dependency>
+
+    <!-- spring-boot-configuration-processor permet l'injection de paramètre
+        tels que les informations de connexion BDD -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-configuration-processor</artifactId>
     </dependency>
 </dependencies>
 </project>

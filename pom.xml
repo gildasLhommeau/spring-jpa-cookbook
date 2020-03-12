@@ -3,30 +3,35 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.cookbook</groupId>
     <artifactId>spring-jpa-cookbook</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>spring-jpa-cookbook-data</module>
         <module>spring-jpa-cookbook-main</module>
+        <module>spring-jpa-cookbook-model</module>
+        <module>spring-jpa-cookbook-service</module>
+        <module>spring-jpa-cookbook-webservice</module>
+        <module>spring-jpa-cookbook-dao</module>
     </modules>
 
-    <properties>
-        <spring-boot-version>2.2.4.RELEASE</spring-boot-version>
-    </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.4.RELEASE</version>
+
+    </parent>
+
+
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot</artifactId>
-                <version>${spring-boot-version}</version>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.20</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-autoconfigure</artifactId>
-                <version>${spring-boot-version}</version>
-            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
